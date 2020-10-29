@@ -1,3 +1,5 @@
+// +build !windows
+
 package promptui
 
 import "github.com/chzyer/readline"
@@ -7,6 +9,9 @@ import "github.com/chzyer/readline"
 var (
 	// KeyEnter is the default key for submission/selection.
 	KeyEnter rune = readline.CharEnter
+
+	// KeyBackspace is the default key for deleting input text.
+	KeyBackspace rune = readline.CharBackspace
 
 	// KeyCtrlH is the key for deleting input text.
 	KeyCtrlH rune = readline.CharCtrlH
